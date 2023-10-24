@@ -17,7 +17,11 @@ export const SelectBuff: React.FC<Props> = ({ buff, setBuff }) => {
         onChange={(e) => setBuff(e.target.value)}
       >
         {buffList.map((el) => (
-          <option className={styles.option} key={el}>
+          <option 
+            className={styles.option}
+            value={el} 
+            key={el}
+          >
             {el}
           </option>
         ))}
