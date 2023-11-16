@@ -18,8 +18,9 @@
   background-color: #24242497;
   color: white;
   font-size: 20px;
-  padding: 10px 20px;
-  border-radius: 0;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
   box-shadow: 0px 0px 10px 0px #000;
 }
 
