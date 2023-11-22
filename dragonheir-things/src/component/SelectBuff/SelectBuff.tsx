@@ -1,4 +1,4 @@
-import { buffList } from "../../data";
+import { buffList } from "../../data/data";
 import styles from "./selectbuff.module.css";
 
 type Props = {

@@ -1,0 +1,64 @@
+.heroinfo {
+  width: 96%;
+  margin: 0 auto;
+}
+
+.herotitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-shadow: 0 0 3px #000,
+  5px 5px 5px #292929;
+}
+
+.herotitle img {
+  height: 40px;
+  width: 40px;
+}
+
+.hero-orientation {
+  font-size: 1rem;
+  color: lightgray;
+  align-self: end;
+  justify-self: end;
+  padding-bottom: 8px;
+}
+
+.hero-box {
+  display: flex;
+}
+
+.hero-box div {
+    position: relative;
+}
+
+.hero-avatar {
+  object-fit: contain;
+  object-position: top left;
+}
+
+.hero-skills{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillblock {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.skillblock img {
+  height: 50px;
+  width: 50px;
+}
+
+.hero-story {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

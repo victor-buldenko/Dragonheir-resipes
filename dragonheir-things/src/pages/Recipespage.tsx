@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import { Dna } from "react-loader-spinner";
 import { SelectBuff } from "../component/SelectBuff";
-import { Recipes, recipes } from "../data";
+import { recipes } from "../data/data";
 import { checkItemBuff } from "../utility";
 import { RecipesTable } from "../component/RecipesTable";
+import { Recipes } from "../data/interfaces";
 
 export type State = Record<string, boolean>;
 
-export const Startpage: React.FC = () => {
+export const Recipespage: React.FC = () => {
   const [buffSelected, setBuffSelected] = useState("");
   const [loadingData, setLoadingData] = useState(true);
   const [recipesList, setRecipesList] = useState<Recipes[]>([]);
@@ -33,7 +34,6 @@ export const Startpage: React.FC = () => {
 
   return (
     <section>
-      <h1 className="recipes-title">Reciples list</h1>
       <SelectBuff buff={buffSelected} setBuff={setBuffSelected} />
       {loadingData ? (
         <Dna

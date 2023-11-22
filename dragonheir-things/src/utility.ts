@@ -1,4 +1,4 @@
-import { EType, Recipes } from "./data";
+import { EType, Recipes } from "./data/interfaces";
 
 export const checkItemBuff = (buff: string, recipe: Recipes) => {
   switch (buff) {
@@ -139,3 +139,21 @@ export const getBuffIconSrc = (arg: string) => {
       break;
   }
 };
+
+export const checkHeroRarity = (arg: string) => {
+  switch (arg) {
+    case "Legendary":
+      return "legendary-text";
+
+    case "Epic":
+      return "epic-text";
+
+    case "Rare":
+      return "rare-text";
+
+    default:
+      return "common-text";
+  }
+};
+
+

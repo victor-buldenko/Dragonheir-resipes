@@ -1,0 +1,69 @@
+.herotypebutton {
+  position: relative;
+  display: inline-flex;
+  height: 66px;
+  width: 66px;
+  border-radius: 8px;
+  border-style: hidden;
+  border-width: 0px;
+  background-position: center;
+  background-size: cover;
+  outline: 1px solid lightgray;
+}
+
+.herotypebutton-check {
+  filter: contrast(200%);
+  box-shadow: 0 0 15px #fff,0 0 10px #fff, 0 0 5px #fff;
+  font-size: 70px;
+  justify-content: center;
+  line-height: 66px;
+  mix-blend-mode: normal;
+}
+.herotypebutton-check:before {
+  z-index: 2;
+  content: "\2714";
+  color: green;
+  text-shadow: 0 0 2px #000;
+}
+
+.herotypebutton-legendary {
+  background-color: #ffaa00;
+  margin-left: auto;
+}
+
+.herotypebutton-epic {
+  background-color: #cc00ff;
+}
+
+.herotypebutton-rare {
+  background-color: #0085fa;
+}
+
+.herotypebutton-common {
+  background-color: #999999;
+}
+
+.fire {
+  background-image: url('./fury/el-fire.png');
+  background-color: transparent;
+}
+.ice {
+  background-image: url('./fury/el-ice.png');
+  background-color: transparent;
+}
+.lightning {
+  background-image: url('./fury/el-lightning.png');
+  background-color: transparent;
+}
+.necro {
+  background-image: url('./fury/el-necro.png');
+  background-color: transparent;
+}
+.poison {
+  background-image: url('./fury/el-poison.png');
+  background-color: transparent;
+}
+.radiance {
+  background-image: url('./fury/el-radiance.png');
+  background-color: transparent;
+}

@@ -1,0 +1,53 @@
+.herocards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(20% - 12px);
+  border: 1px solid #102c00;
+  border-radius: 8px;
+  text-decoration: none;
+  backdrop-filter: invert(10%);
+  overflow: hidden;
+  transition: 0.4s;
+}
+.herocards:hover {
+  box-shadow: 2px 6px 5px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
+}
+
+.herocards div {
+  width: 100%;
+}
+
+.heroavatar {
+  width: 100%;
+}
+
+.elementicon {
+  position: absolute;
+  display: block;
+  right: 5px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.herocards p {
+  padding: 10px;
+  font-weight: 600;
+  text-shadow: 0 0 1px #000,
+  2px 2px 2px #292929;
+}
+
+.legendary-text {
+  color: #ffaa00;
+}
+.epic-text {
+  color: #cc00ff;
+}
+.rare-text {
+  color: #0085fa;
+}
+.common-text {
+  color: #bababa;
+}

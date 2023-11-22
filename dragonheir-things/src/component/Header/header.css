@@ -1,0 +1,29 @@
+.header {
+  width: 96%;
+  margin: 0  auto 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.header-link{
+  font-family: inherit;
+  text-decoration: none;
+  color: azure;
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 0 0 1px #000,
+  2px 2px 2px #292929;
+  transition: 0.5s;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 2px solid transparent;
+}
+
+.header-link:hover,
+.header-link--active {
+  color: aquamarine;
+  border-bottom-color: aquamarine;
+  backdrop-filter: invert(10%);
+}
