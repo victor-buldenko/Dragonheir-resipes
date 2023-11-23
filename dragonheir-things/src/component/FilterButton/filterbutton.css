@@ -1,8 +1,14 @@
 .herotypebutton {
   position: relative;
-  display: inline-flex;
-  height: 66px;
-  width: 66px;
+  /* display: inline-flex; */
+  /* width: 3.5rem;
+  height: 3.5rem; */
+  flex-grow: 1;
+  min-width: 5%;
+  min-height: 50%;
+  max-width: 8%;
+  max-height: 100%;
+  aspect-ratio: 1 / 1;
   border-radius: 8px;
   border-style: hidden;
   border-width: 0px;
@@ -28,7 +34,6 @@
 
 .herotypebutton-legendary {
   background-color: #ffaa00;
-  margin-left: auto;
 }
 
 .herotypebutton-epic {
@@ -44,26 +49,26 @@
 }
 
 .fire {
-  background-image: url('./fury/el-fire.png');
+  background-image: url('/fury/el-fire.png');
   background-color: transparent;
 }
 .ice {
-  background-image: url('./fury/el-ice.png');
+  background-image: url('/fury/el-ice.png');
   background-color: transparent;
 }
 .lightning {
-  background-image: url('./fury/el-lightning.png');
+  background-image: url('/fury/el-lightning.png');
   background-color: transparent;
 }
 .necro {
-  background-image: url('./fury/el-necro.png');
+  background-image: url('/fury/el-necro.png');
   background-color: transparent;
 }
 .poison {
-  background-image: url('./fury/el-poison.png');
+  background-image: url('/fury/el-poison.png');
   background-color: transparent;
 }
 .radiance {
-  background-image: url('./fury/el-radiance.png');
+  background-image: url('/fury/el-radiance.png');
   background-color: transparent;
 }

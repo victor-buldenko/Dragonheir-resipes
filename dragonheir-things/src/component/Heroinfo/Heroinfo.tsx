@@ -11,12 +11,11 @@ export const Heroinfo: React.FC = () => {
       <h1 className="herotitle">
         <img src={hero.element_icon} />
         {hero.heroname}
-        <span className="hero-orientation">/{hero.orientation}</span>
+        <span className="hero-orientation">/{hero.orientation.toLocaleLowerCase()}</span>
       </h1>
 
       <div className="hero-box">
-        <div>
-          {/* <p className="hero-rating">{hero.tier.avg}</p> */}
+        <div className="hero-avatar-box">
           <img src={hero.avatarPath} className="hero-avatar" />
         </div>
         <div className="hero-skills">

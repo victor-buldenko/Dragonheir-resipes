@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&display=swap');
 @import './component/Header/header.css';
+@import './component/Burger/burger.css';
 @import './component/RecipesTable/recipetable.css';
 @import './component/Herocard/herocard.css'; 
 @import './component/Heroinfo/heroinfo.css'; 
 @import './component/FilterButton/filterbutton.css';
 
 :root {
-  /* font-family: 'Open Sans', sans-serif; */
-  font-family: 'Inter', system-ui, 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Philosopher', sans-serif;
+  /* font-family: 'Open Sans', 'Inter', system-ui, 'Avenir', Helvetica, Arial, sans-serif; */
   color: azure;
+  font-size: clamp(14px, 3vw, 18px);
   line-height: 1.5;
   font-weight: 400;
 }
@@ -25,7 +27,8 @@
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #203a43; /* Колір фону треку (фон за скролбаром) */
+  background-color: #2c5364;
+  /* background-color: #203a43; */
 }
 
 
@@ -44,8 +47,6 @@ html {
 body {
   position: relative;
   min-height: 100vh;
-  width: 100%;
-
 
   background: #0f2027; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -59,10 +60,22 @@ body {
     #2c5364,
     #203a43,
     #0f2027
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ); 
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.scroll-lock {
+  overflow-y: hidden;
+}
 
+select,
+input {
+  font-family: inherit;
+}
+
+select {
+  font-weight: 500;
+}
 
 /* ====== Heroespage ======= */
 /* #region */
@@ -75,35 +88,93 @@ body {
 }
 
 .heroesForm {
+  font-family: inherit;
   margin: 30px 6px;
   display: flex;
   gap: 10px;
 }
 
-.herosearch {
-  outline: none;
-  border: none;
-  border-color: #cccccc;
-  padding: 15px;
-  color: azure;
-  font-size: 32px;
-  border-radius: 8px;
-  border-style: hidden;
-  border-width: 0px;
-  box-shadow: inset 0px 0px 3px 0px rgba(194, 194, 194, .75);
-  background-color: inherit;
-  backdrop-filter: invert(10%);
+.filterbutton-box {
+  display: flex;
+  flex-grow: 1;
+  flex: 2.5;
+  justify-content: end;
+  gap: 0.5rem;
+
 }
 
-.herosearch:focus {
-  outline: 1px solid #fff;
-}
+/* #endregion */
 
-.heroeslist {
+/* ===== Startpage ===== */
+.startpage {
+  width: 96%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  gap: 2rem;
 }
-/* #endregion */
 
+.startpage iframe {
+  width: calc(33% - 2rem);
+}
+
+@media (max-width: 1024px) {
+  .heroesForm {
+    margin-top: 50px;
+  }
+  
+  .header-link{
+    display: none;
+  }
+
+  .burger-button {
+    display: block;
+  }
+
+  .herocards {
+    width: calc(25% - 8px);
+  }
+
+  .herosearch {
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .herotypebutton {
+    border-radius: 6px;
+  } 
+}
+
+
+@media (max-width: 640px) {
+  .heroesForm {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+
+  .herocards {
+    width: calc(33% - 4px);
+  }
+
+  .herosearch {
+    padding: 8px;
+    border-radius: 6px;
+    max-width: 100%;
+  }
+
+  .filterbutton-box {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .herotypebutton {
+    border-radius: 6px;
+  } 
+}
+
+@media (max-width: 400px) {
+  .herocards {
+    width: calc(50% - 4px);
+  }
+}

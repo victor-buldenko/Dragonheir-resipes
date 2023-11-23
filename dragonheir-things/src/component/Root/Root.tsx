@@ -3,6 +3,7 @@ import App from "../../App";
 import { Recipespage } from "../../pages/Recipespage";
 import { Heroespage } from "../../pages/Heroespage";
 import { Heroinfo } from "../Heroinfo";
+import { Startpage } from "../../pages/Startpage";
 
 export const Root: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ export const Root: React.FC = () => {
         <Route path="*" element={<p>Page not found</p>} />
         <Route path="/home" element={<Navigate to="/" />} />
         <Route path="/" element={<App />}>
+          <Route index element={<Startpage />} />
           <Route path="recipes" element={<Recipespage />} />
           <Route path="heroes">
             <Route index element={<Heroespage />} />

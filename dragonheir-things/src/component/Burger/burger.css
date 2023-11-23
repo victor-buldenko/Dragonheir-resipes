@@ -1,0 +1,43 @@
+.burger-button {
+  z-index: 3;
+  display: none;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  background-color: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.burger-line {
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  height: 4px;
+  width: 40px;
+  transition: 0.5s ;
+}
+.top{
+  top: 4px;
+}
+.mid{
+  top: 18px;
+}
+.bot{
+  top: 32px;
+}
+
+.open .top {
+  top: calc(50% - 2px);
+  transform: rotate(45deg);
+}
+
+.open .bot {
+  top: calc(50% - 2px);
+  transform: rotate(-45deg);
+}
+
+.open .mid {
+  display: none;
+}

@@ -1,17 +1,20 @@
 .header {
-  width: 96%;
+  /* width: 100vw; */
   margin: 0  auto 40px;
   display: flex;
   justify-content: center;
 }
 
-.header-link{
+.header-link,
+.mobilelink {
   font-family: inherit;
+  text-transform: uppercase;
   text-decoration: none;
   color: azure;
-  font-size: 20px;
-  font-weight: 600;
-  text-shadow: 0 0 1px #000,
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 15px #000,
   2px 2px 2px #292929;
   transition: 0.5s;
   height: 50px;
@@ -22,7 +25,38 @@
 }
 
 .header-link:hover,
-.header-link--active {
+.header-link--active{
+  color: aquamarine;
+  border-bottom-color: aquamarine;
+  backdrop-filter: invert(10%);
+}
+
+.mobilemenu {
+  top: 0;
+  top: -100vh;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000cd;
+  height: 100vh;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.mobilemenu-open {
+  top: 0;
+}
+
+.mobilelink {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid transparent;
+}
+
+.mobilelink:active {
   color: aquamarine;
   border-bottom-color: aquamarine;
   backdrop-filter: invert(10%);

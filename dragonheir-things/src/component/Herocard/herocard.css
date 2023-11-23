@@ -1,12 +1,43 @@
+.herosearch {
+  outline: none;
+  border: none;
+  border-color: #cccccc;
+  color: azure;
+  padding: 15px;
+  font-size: clamp(14px, 2.5vw, 32px);
+  border-radius: 8px;
+  border-style: hidden;
+  border-width: 0px;
+  box-shadow: inset 0px 0px 3px 0px rgba(194, 194, 194, .75);
+  background-color: inherit;
+  backdrop-filter: invert(10%);
+  max-width: 30%;
+}
+
+.herosearch:focus {
+  outline: 1px solid #fff;
+}
+
+.heroeslist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  /* row-gap: 8px; */
+  /* для 5 карток героїв на екран */
+  /* justify-content: center; */
+  /* gap: 12px; */
+}
+
 .herocards {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: calc(20% - 12px);
+  width: 16%;
   border: 1px solid #102c00;
   border-radius: 8px;
+  
   text-decoration: none;
-  backdrop-filter: invert(10%);
   overflow: hidden;
   transition: 0.4s;
 }
@@ -33,13 +64,29 @@
 }
 
 .herocards p {
+  color: azure;
+  font-size: clamp(16px, 2.5vw, 20px);
   padding: 10px;
-  font-weight: 600;
+  font-weight: 500;
   text-shadow: 0 0 1px #000,
   2px 2px 2px #292929;
 }
 
 .legendary-text {
+  background: linear-gradient(#ffa60066, transparent);
+}
+
+.epic-text {
+  background: linear-gradient( #8b27a466, transparent);
+}
+.rare-text {
+  background: linear-gradient( #0059a655, transparent);
+}
+.common-text {
+  background: linear-gradient( #bababa66, transparent);
+}
+
+/* .legendary-text {
   color: #ffaa00;
 }
 .epic-text {
@@ -50,4 +97,4 @@
 }
 .common-text {
   color: #bababa;
-}
+} */

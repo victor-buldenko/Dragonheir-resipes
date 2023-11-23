@@ -54,7 +54,7 @@ export const Heroespage: React.FC = () => {
       if (poison && str === "Poison") {
         return true;
       }
-      if (necro && str === "Necro") {
+      if (necro && str === "Necrosis") {
         return true;
       }
       if (lightning && str === "Lightning") {
@@ -65,6 +65,8 @@ export const Heroespage: React.FC = () => {
 
     const filterHeroes = (arr: Hero[], str: string) => {
       const res = arr.filter(({ heroname, rarity, element }) => {
+        console.log(element);
+        
         const name = heroname.toLocaleLowerCase();
         const search = str.toLocaleLowerCase();
         if (!heroRarityCheck(rarity)) {
@@ -107,6 +109,7 @@ export const Heroespage: React.FC = () => {
           placeholder="hero name..."
           onChange={(e) => setSearchValue(e.target.value.trim())}
         />
+        <div className="filterbutton-box">
         <FilterButton
           style="herotypebutton-legendary"
           state={{ check: lega, setCheck: setLega }}
@@ -141,6 +144,7 @@ export const Heroespage: React.FC = () => {
           style="radiance"
           state={{ check: radiance, setCheck: setRadiance }}
         />
+        </div>
       </form>
       <div className="heroeslist">
         {heroeslist.map((hero) => (

@@ -155,5 +155,3 @@ export const checkHeroRarity = (arg: string) => {
       return "common-text";
   }
 };
-
-

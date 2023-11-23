@@ -49,6 +49,11 @@ tbody tr td:first-child {
   object-fit: cover;
 }
 
+.recipes-name{
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
 .icon {
   display: block;
   width: 25px;

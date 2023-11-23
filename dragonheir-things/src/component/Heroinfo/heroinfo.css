@@ -1,3 +1,4 @@
+
 .heroinfo {
   width: 96%;
   margin: 0 auto;
@@ -18,11 +19,12 @@
 }
 
 .hero-orientation {
+  padding-left: 4px;
   font-size: 1rem;
   color: lightgray;
   align-self: end;
   justify-self: end;
-  padding-bottom: 8px;
+  padding-bottom: 7px;
 }
 
 .hero-box {
@@ -33,9 +35,12 @@
     position: relative;
 }
 
+.hero-avatar-box{
+  display: flex;
+}
+
 .hero-avatar {
   object-fit: contain;
-  object-position: top left;
 }
 
 .hero-skills{
