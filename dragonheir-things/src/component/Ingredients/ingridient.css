@@ -1,0 +1,23 @@
+.ingridient {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.ingridient img {
+  z-index: 2;
+  position: absolute;
+  display: none;
+  width: 70px;
+  height: 70px;
+  top: -50%;
+  left: -80px;
+  pointer-events: none;
+}
+
+.ingridient-link:hover {
+  color: aquamarine;
+}
+.ingridient-link:hover img {
+  display: block;
+}

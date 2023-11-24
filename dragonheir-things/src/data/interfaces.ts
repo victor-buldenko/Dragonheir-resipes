@@ -15,11 +15,14 @@ export enum EType {
   sweets = 'drugs.png',
 }
 
+export type ingrID = [string, number];
+
 export interface Recipes {
   id: number;
   name: string;
   icons: EType[];
   result: string[];
+  ingrID: ingrID[];
   ingr?: string[] | null;
   altIngr?: string[] | null;
 }

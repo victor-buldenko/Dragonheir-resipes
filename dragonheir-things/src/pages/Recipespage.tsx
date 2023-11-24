@@ -33,7 +33,7 @@ export const Recipespage: React.FC = () => {
   }, []);
 
   return (
-    <section>
+    <section className="recipespage">
       <SelectBuff buff={buffSelected} setBuff={setBuffSelected} />
       {loadingData ? (
         <Dna

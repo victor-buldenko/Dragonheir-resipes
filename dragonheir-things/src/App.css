@@ -5,13 +5,15 @@
 @import './component/Herocard/herocard.css'; 
 @import './component/Heroinfo/heroinfo.css'; 
 @import './component/FilterButton/filterbutton.css';
+@import './component/Ingredients/ingridient.css';
+@import './component/ModalIngridient/modalingridient.css';
 
 :root {
   font-family: 'Philosopher', sans-serif;
   /* font-family: 'Open Sans', 'Inter', system-ui, 'Avenir', Helvetica, Arial, sans-serif; */
   color: azure;
   font-size: clamp(14px, 3vw, 18px);
-  line-height: 1.5;
+  /* line-height: 1.5; */
   font-weight: 400;
 }
 
@@ -64,6 +66,10 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.app {
+  position: relative;
+}
+
 .scroll-lock {
   overflow-y: hidden;
 }
@@ -76,6 +82,7 @@ input {
 select {
   font-weight: 500;
 }
+
 
 /* ====== Heroespage ======= */
 /* #region */
@@ -106,18 +113,29 @@ select {
 /* #endregion */
 
 /* ===== Startpage ===== */
+/* #region  */
 .startpage {
   width: 96%;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
-.startpage iframe {
-  width: calc(33% - 2rem);
+/* #endregion */
+
+/* ===== Recipespage =====  */
+/* #region */
+
+.recipespage {
+  position: relative;
 }
+
+/* #endregion */
 
 @media (max-width: 1024px) {
   .heroesForm {
@@ -143,6 +161,9 @@ select {
 
   .herotypebutton {
     border-radius: 6px;
+  }
+  .ingr-sellers{
+    width: 90%;
   } 
 }
 
@@ -171,10 +192,20 @@ select {
   .herotypebutton {
     border-radius: 6px;
   } 
+
+  .ingr-sellers{
+    font-size: 14px;
+    padding: 2px;
+    width: 95%;
+  }
 }
 
 @media (max-width: 400px) {
   .herocards {
     width: calc(50% - 4px);
+  }
+
+  .ingr-sellers{
+    font-size: 12px;
   }
 }

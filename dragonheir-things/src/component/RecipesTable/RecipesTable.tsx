@@ -1,5 +1,6 @@
 import { Recipes } from "../../data/interfaces";
 import { checkRarity } from "../../utility";
+import { Ingredients } from "../Ingredients";
 
 const tableCols = [
   "img",
@@ -11,7 +12,7 @@ const tableCols = [
 ];
 
 type Props = { list: Recipes[] };
-export const RecipesTable: React.FC<Props> = ({ list }) => {
+export const RecipesTable: React.FC<Props> = ({ list }) => { 
   return (
     <table className="recipes-box">
       <thead>
@@ -24,7 +25,7 @@ export const RecipesTable: React.FC<Props> = ({ list }) => {
         </tr>
       </thead>
       <tbody>
-        {list.map(({ id, name, icons, result, ingr, altIngr }) => (
+        {list.map(({ id, name, icons, result, ingrID, altIngr }) => (
           <tr key={name}>
             <td className={checkRarity(id)}>
               <img
@@ -51,11 +52,9 @@ export const RecipesTable: React.FC<Props> = ({ list }) => {
               ))}
             </td>
             <td>
-              {ingr && (
+              {ingrID && (
                 <div className="ingredients">
-                  {ingr.map((el: string) => (
-                    <p key={`${name}-${el}`}>{el}</p>
-                  ))}
+                  <Ingredients listIngr={ingrID} />
                 </div>
               )}
             </td>
