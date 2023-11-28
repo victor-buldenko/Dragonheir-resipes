@@ -39,13 +39,14 @@ export const Header: React.FC = () => {
         Рецепти
       </NavLink>
 
-      <a
-        href="https://t.me/od1ngamings"
-        className="header-link"
-        target="_blank"
+      <NavLink
+        to="/guides"
+        className={({ isActive }) =>
+          isActive ? "header-link header-link--active" : "header-link disabled"
+        } // delete DISABLED class
       >
-        Спільнота
-      </a>
+        гайди
+      </NavLink>
 
       <div
         className={classNames("mobilemenu", {
@@ -74,14 +75,12 @@ export const Header: React.FC = () => {
         >
           Рецепти
         </Link>
-        <a
-          onClick={() => setBurgerIsOpen(!burgerIsOpen)}
-          className="mobilelink"
-          href="https://t.me/od1ngamings"
-          target="_blank"
-        >
-          Спільнота
-        </a>
+        <Link
+        to="/guides"
+        className="mobilelink disabled" // delete DISABLED class
+      >
+        гайди
+      </Link>
       </div>
       <Burger status={burgerIsOpen} click={setBurgerIsOpen} />
     </header>

@@ -11,14 +11,14 @@
   background-color: #07000e94;
   box-shadow: 0px 0px 10px 0px #000;
 }
-.recipes-box::after {
+/* .recipes-box::after {
   position: absolute;
   content: 'переклад: Katarina Sforca';
   bottom: -18px;
   right: 0;
   font-size: 12px;
   color:darkgray;
-}
+} */
 
 thead tr th {
   border-bottom: 1px solid #505050;

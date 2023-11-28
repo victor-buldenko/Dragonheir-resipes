@@ -7,6 +7,8 @@
 @import './component/FilterButton/filterbutton.css';
 @import './component/Ingredients/ingridient.css';
 @import './component/ModalIngridient/modalingridient.css';
+@import './component/Footer/footer.css';
+@import './component/ScrollUp/scrollup.css';
 
 :root {
   font-family: 'Philosopher', sans-serif;
@@ -42,6 +44,12 @@
   /* outline: 1px solid red; */
 }
 
+.disabled {
+  pointer-events: none;
+  user-select: none;
+  color: #d3d3d387;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -68,6 +76,9 @@ body {
 
 .app {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .scroll-lock {
@@ -88,10 +99,11 @@ select {
 /* #region */
 
 .herosection{
-  max-width: 96%;
+  width: 96%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
 }
 
 .heroesForm {
@@ -133,6 +145,17 @@ select {
 
 .recipespage {
   position: relative;
+  margin-bottom: 40px;
+}
+
+/* #endregion */
+
+/* ===== Guides =====  */
+/* #region */
+
+.guides {
+  position: relative;
+  margin-bottom: 40px;
 }
 
 /* #endregion */

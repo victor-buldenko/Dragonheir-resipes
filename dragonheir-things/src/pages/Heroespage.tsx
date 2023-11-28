@@ -65,7 +65,6 @@ export const Heroespage: React.FC = () => {
 
     const filterHeroes = (arr: Hero[], str: string) => {
       const res = arr.filter(({ heroname, rarity, element }) => {
-        console.log(element);
         
         const name = heroname.toLocaleLowerCase();
         const search = str.toLocaleLowerCase();
