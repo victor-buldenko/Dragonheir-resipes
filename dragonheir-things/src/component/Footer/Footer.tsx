@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
           className="footer-link"
           target="_blank"
         >
-          <img src="icons/telegram.svg" alt="telegram" />
+          <img src="/telegrampng.png" alt="telegram" />
           <span>спільнота Od1n</span>
         </a>
         <a
@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
           className="footer-link"
           target="_blank"
         >
-          <img src="icons/buy-me-a-coffee.jpg" alt="telegram" />
+          <img src="/coffeepng.png" alt="telegram" />
           <span>підтримати розробку</span>
         </a>
 

@@ -138,6 +138,13 @@ select {
   font-size: 2rem;
 }
 
+.trizub {
+  display: inline-block;
+  margin: 0 auto;
+  /* width: 120px;
+  height: 167px; */
+}
+
 /* #endregion */
 
 /* ===== Recipespage =====  */

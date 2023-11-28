@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  pointer-events: none;
 }
 
 .footer-tnx p {
@@ -47,8 +48,13 @@
   width: 1.2rem;
   height: 1.2rem;
   border-radius: 50%;
+  background-color: rgba(127, 255, 212, 0.256);
 }
 
 .footer-link:hover {
   color: aquamarine;
+}
+
+.footer-link:hover img {
+    background-color: rgba(127, 255, 212, 0.519);
 }
